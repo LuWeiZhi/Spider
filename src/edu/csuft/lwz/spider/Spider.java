@@ -11,27 +11,27 @@ import org.jsoup.select.Elements;
 
 
 /**
- * ×¥È¡Ò³ÃæÖĞÓ°Æ¬ĞÅÏ¢
- * @author Â¬ÍşÖ¾
+ * ×¥æŠ“å–å½±ç‰‡ä¿¡æ¯
+ * @author å¢å¨å¿—Ö¾
  *
  */
 public class Spider implements Runnable{
 	
 	/**
-	 * Ò³ÃæµÄÂ·¾¶£¨URL£©
+	 * é¡µé¢è·¯å¾„
 	 */
 	
 	String url;
 	
 	/**
-	 * ´æ´¢×¥È¡µÄÊı¾İ
+	 * åˆ›å»ºçˆ¬è™«
 	 */
 	ArrayList<Film> list;
 
 	/**
-	 * ´´½¨ÅÀ³æ
-	 * @param url	Ò³ÃæµÄÂ·¾¶
-	 * @param list	´æÈ¡Êı¾İµÄÁĞ±í
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @param url	é¡µé¢çš„è·¯å¾„
+	 * @param list	å­˜å‚¨æ•°æ®çš„åˆ—è¡¨
 	 */
 	public Spider(String url, ArrayList<Film> list) {
 		super();
@@ -43,15 +43,15 @@ public class Spider implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		//»ñµÃÖ´ĞĞ¸ÃÈÎÎñµÄÏß³ÌµÄÃû³Æ
+		//è·å¾—æ‰§è¡Œè¯¥ä»»åŠ¡çº¿ç¨‹çš„åç§°
 		String name=Thread.currentThread().getName();
-		System.out.println(name+"Ïß³Ì£¬´¦Àí£º"+url);
+		System.out.println(name+"çº¿ç¨‹ï¼Œå¤„ç†"+url);
 		
 		//JSOUP
 		try {
 			Document doc=  Jsoup.connect(url).get();
 			
-			//´ÓÎÄµµÖĞ²éÕÒ½áµã
+			//ä»æ–‡æ¡£ä¸­æŸ¥æ‰¾ç»“ç‚¹
 			Elements es=doc.select(".grid_view .item");
 			
 			for(Element e :es){
@@ -70,7 +70,7 @@ public class Spider implements Runnable{
 				list.add(f);
 				
 			}
-			System.out.println(name+"Ïß³Ì£¬Íê³É£º"+url);
+			System.out.println(name+"çº¿ç¨‹ï¼Œå®Œæˆ"+url);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

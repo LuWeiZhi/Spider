@@ -2,37 +2,37 @@ package edu.csuft.lwz.spider;
 
 public class Film {
 	/**
-	 * 影片名称
+	 * 褰辩墖鍚嶇О
 	 */
 	String title;
 	
 	/**
-	 * 相关信息
+	 * 鐩稿叧淇℃伅
 	 */
 	String info;
 	
 	/**
-	 * 评分
+	 * 璇勫垎
 	 */
 	double rating;
 	
 	/**
-	 * 评分人数
+	 * 璇勫垎浜烘暟
 	 */
 	int num;
 	
 	/**
-	 * 排名
+	 * 鎺掑悕
 	 */
 	int id;
 	
 	/**
-	 * 海报
+	 * 娴锋姤
 	 */
 	String poster;
 	
 	/**
-	 * 短评
+	 * 鐭彞
 	 */
 	String quote;
 	

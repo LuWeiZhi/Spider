@@ -6,8 +6,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * ³ÌĞòÈë¿Ú
- * @author Â¬ÍşÖ¾
+ * ç¨‹åºå…¥å£
+ * @author Ö¾å¢å¨å¿—
  *
  */
 public class App {
@@ -15,14 +15,14 @@ public class App {
 	
 	public static void main(String[] args) {
 		
-		//Ïß³Ì³Ø
-		//¹Ì¶¨´óĞ¡
+		//çº¿ç¨‹æ± 
+		//å›ºå®šå¤§å°
 		ExecutorService pool=Executors.newFixedThreadPool(4);
 		
-		//ÎŞÏŞ£¨»º´æ£©
+		//æ— é™
 		pool=Executors.newCachedThreadPool();
 		
-		//Ò»¸öÏß³Ì
+		//ä¸€ä¸ªçº¿ç¨‹
 		//pool=Executors.newSingleThreadExecutor();
 		
 		ArrayList<Film> list=new ArrayList<>();
@@ -44,7 +44,7 @@ public class App {
 			}
 		}
 		
-		//Êı¾İÅÅĞò
+		//æ’åº
 		System.out.println(list.size());
 		
 //		for(Film film:list){
@@ -52,13 +52,13 @@ public class App {
 //		}
 		
 		
-		//Ğ´ÈëÎÄ¼ş
+		//å†™å…¥æ–‡ä»¶
 		
-		String file="d:/film.csv";	//¾ø¶ÔÂ·¾¶
-		 file="film.csv";			//Ïà¶ÔÂ·¾¶			
+		String file="d:/film.csv";	//ç»å¯¹è·¯å¾„
+		 file="film.csv";			//ç›¸å¯¹è·¯å¾„			
 		 
 		 try(FileWriter out =new FileWriter(file)) {
-			 //Ğ´Êı¾İ
+			 //å†™æ•°æ®
 			 for(Film film:list){
 				 out.write(film.toCSV());
 			 }
