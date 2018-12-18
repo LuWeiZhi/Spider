@@ -14,7 +14,7 @@ public class Film {
 	/**
 	 * 评分
 	 */
-	String rating;
+	double rating;
 	
 	/**
 	 * 评分人数
@@ -35,6 +35,10 @@ public class Film {
 	 * 短评
 	 */
 	String quote;
+	
+	public String toCSV(){
+		return String.format("%d,%s,%d,%.1f\n", id,title,num,rating);
+	}
 
 	@Override
 	public String toString() {
